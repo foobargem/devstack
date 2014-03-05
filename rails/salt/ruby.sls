@@ -1,7 +1,6 @@
 rbenv-deps:
   pkg.installed:
     - pkgs:
-      - sudo
       - git-core
       - build-essential
       - autoconf
