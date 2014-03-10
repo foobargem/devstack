@@ -10,7 +10,7 @@ rbenv-deps:
       - libcurl4-openssl-dev
       - libreadline6-dev
       - libssl-dev
-      - libmysqlclient-dev
+      - libmariadbclient-dev
       - libpcre3-dev
       - libxslt1-dev
 

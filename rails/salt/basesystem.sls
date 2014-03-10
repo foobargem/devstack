@@ -3,4 +3,5 @@ essential:
     - pkgs:
       - sudo
       - ntp
+      - python-apt
 
