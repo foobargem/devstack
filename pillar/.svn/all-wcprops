@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/orchard-sls/!svn/ver/4/trunk/pillar
+END
+ruby.sls
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/orchard-sls/!svn/ver/4/trunk/pillar/ruby.sls
+END
+top.sls
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/orchard-sls/!svn/ver/4/trunk/pillar/top.sls
+END

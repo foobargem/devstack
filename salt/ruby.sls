@@ -1,3 +1,5 @@
+{% set user = salt['pillar.get']('ruby:user') %}
+
 rbenv-deps:
   pkg.installed:
     - pkgs:
@@ -16,14 +18,14 @@ rbenv-deps:
 
 ruby:
   rbenv.installed:
-    - name: 2.0.0-p353
+    - name: {{ salt['pillar.get']('rbenv:ruby-version') }}
     - default: True
-    - user: orchard
+    - user: {{ user }}
     - require:
       - pkg: rbenv-deps
   
 
-/home/orchard/.profile:
+/home/{{ user }}/.profile:
   file.append:
     - text:
       - export PATH="$HOME/.rbenv/bin:$PATH"
@@ -31,14 +33,14 @@ ruby:
     - require:
       - rbenv: ruby
 
-/home/orchard/.rbenv/bin/rbenv rehash:
+/home/{{ user }}/.rbenv/bin/rbenv rehash:
   cmd.run:
     - require:
-      - file: /home/orchard/.profile
+      - file: /home/{{ user }}/.profile
 
 rails:
   gem.installed:
-    - user: orchard
+    - user: {{ user }}
     - rdoe: False
     - ri: False
     - require:
